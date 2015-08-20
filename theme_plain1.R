@@ -36,7 +36,7 @@ theme_plain1 <- function ()
   ## legend
   legend.title=element_blank(), ## remove legend title
   legend.position="top",
-  legend.text = element_text(size =14), colour="black", face = "bold")
+  legend.text = element_text(size =14), colour="black", face = "bold"),
   
   ## axis
   axis.line = element_line(size=.6), ## thickness of axis
