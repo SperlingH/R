@@ -20,7 +20,7 @@
 
 library(ggplot2)
 
-h.line <- data.frame(Type = c("Quebec", "Mississippi"), Y.intercept = c(35, 15)) # defines horizontal line in the plots of the different Types
+h.line <- data.frame(Type = c("Quebec", "Mississippi"), Y.intercept = c(35, 15)) # defines horizontal line in the plots of the different types
 
 ggplot(CO2, aes(x = conc, y = uptake, colour=factor(Treatment))) + 
 	geom_point() + 
