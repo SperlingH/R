@@ -3,14 +3,13 @@
 # Created by:
 #   HS
 # Objective:
-#   create example data
+#   create grid of plot with individual graphical features
 # Usage:
-#
+#   FIXME - None so far
 # Input:
-#   FIXME - variables to be changed within the function
+#   FIXME - None so far
 # Output:
-#   data frame with Var x, y
-
+#   plot; x vs. y of N * M categories
 
 
 ## Create facet_grid with individual geom_hline
