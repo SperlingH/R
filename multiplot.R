@@ -13,8 +13,8 @@
 
 
 ## Create facet_grid with individual geom_hline
-# use Dataset "CO2"
-# plotting Conc against uptake
+# use dataset "CO2"
+# plotting conc against uptake
 # differntiate between Type (column) and Treatment (row)
 
 library(ggplot2)
