@@ -25,8 +25,21 @@ ggplot(transform(data.frame(x=x), y=dpois(x, 1)), aes(x, y)) +
 
   scale_fill_manual(values=c("grey","grey22", "black"))+## Farbe der Säulen
 
-# FIXME
+###########
 # Barplots with errorbars
+## getting mean and sd over subsets of data
+library(plyr)
+new.df <- ddply(CO2,c("Type", "Treatment", "conc"), summarise, mean.uptake = mean(uptake), sd.uptake = sd(uptake))
+new.df.2 <- subset(new.df, Type=="Quebec" & Treatment =="chilled")
+
+ggplot(new.df.2, aes(conc , mean.uptake))+
+	geom_bar(stat="identity")+
+	geom_errorbar(aes(
+		ymin=new.df.2$mean.uptake-new.df.2$sd.uptake, 
+		ymax=new.df.2$mean.uptake+new.df.2$sd.uptake),
+		width=.2, 
+		position=position_dodge(.9))
+
 # use the "CO2" dataset!!
 #  geom_errorbar(aes(ymin=sub.O.df.n$Mean-sub.O.df.n$SD, ymax=sub.O.df.n$Mean+sub.O.df.n$SD),width=.2, position=position_dodge(.9))+
 
