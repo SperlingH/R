@@ -5,11 +5,12 @@
 # Objective:
 #   create example data
 # Usage:
-#
+#	example_data(N)
+#		# N = Number of data points
 # Input:
 #   Number of data points to be created
 # Output:
-#   data frame with variable x
+#   data frame with variable x with N data points
 # ToDo:
 #	more dimensions
 #	naming of variables
