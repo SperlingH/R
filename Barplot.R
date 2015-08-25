@@ -7,7 +7,7 @@
 # Usage:
 #
 # Input:
-#   FIXME - variables to be changed within the function
+#   
 # Output:
 #   Barplot
 
@@ -15,6 +15,7 @@ library(ggplot2)
 
 #plotting poisson
 x <- c(0:10)
+
 ggplot(transform(data.frame(x=x), y=dpois(x, 1)), aes(x, y)) + 
 	geom_bar(stat="identity", color="black", fill="black") + 
 	theme(
@@ -24,9 +25,10 @@ ggplot(transform(data.frame(x=x), y=dpois(x, 1)), aes(x, y)) +
 
   scale_fill_manual(values=c("grey","grey22", "black"))+## Farbe der Säulen
 
-
-#use the "CO2" dataset!!
-  geom_errorbar(aes(ymin=sub.O.df.n$Mean-sub.O.df.n$SD, ymax=sub.O.df.n$Mean+sub.O.df.n$SD),width=.2, position=position_dodge(.9))+
+# FIXME
+# Barplots with errorbars
+# use the "CO2" dataset!!
+#  geom_errorbar(aes(ymin=sub.O.df.n$Mean-sub.O.df.n$SD, ymax=sub.O.df.n$Mean+sub.O.df.n$SD),width=.2, position=position_dodge(.9))+
 
 ###########
 # Levels in barplots
