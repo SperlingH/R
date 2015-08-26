@@ -40,9 +40,6 @@ ggplot(new.df.2, aes(conc , mean.uptake))+
 		width=.2, 
 		position=position_dodge(.9))
 
-# use the "CO2" dataset!!
-#  geom_errorbar(aes(ymin=sub.O.df.n$Mean-sub.O.df.n$SD, ymax=sub.O.df.n$Mean+sub.O.df.n$SD),width=.2, position=position_dodge(.9))+
-
 ###########
 # Levels in barplots
 
