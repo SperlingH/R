@@ -21,7 +21,7 @@ ggplot(transform(data.frame(x=x), y=dpois(x, 1)), aes(x, y)) +
 	theme(
 		axis.ticks = element_blank(), # remove axis ticks
 		axis.text = element_blank()) + # remove axis text
-	labs(y="counts", x="values")
+	labs(y="counts", x="values") #+
 
   scale_fill_manual(values=c("grey","grey22", "black"))+## Farbe der Säulen
 
