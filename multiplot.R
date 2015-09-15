@@ -24,7 +24,7 @@
   ggplot(CO2, aes(x = conc, y = uptake, colour=factor(Treatment))) + 
   	geom_point() + 
   	facet_grid(Treatment~Type) +
-  	stat_smooth() + 
+  	stat_smooth(method="loess") + 
   	geom_hline(data = h.line, aes(yintercept = Y.intercept))+ # plots horizontal line in the plot
   
   # Titel 
@@ -37,11 +37,11 @@
   #  coord_cartesian(ylim=c(1,5.5)) # scaling of the y-axis 
   # Legend
   #  theme(legend.position="none")#removes legend
- # theme(legend.title=element_blank()) # removes title of legend
-   scale_colour_discrete ( name="Experimental\nCondition",
-                           breaks=c("chilled", "nonchilled"),
-                           labels=c("C", "NC"))+  
-theme(legend.title = element_text(colour="black", size=12, face="bold"), # legend titel
+  #  theme(legend.title=element_blank()) # removes title of legend
+     scale_colour_discrete (name="Experimental\nCondition", # titel of legend
+                            breaks=c("chilled", "nonchilled"), # alters order
+                            labels=c("C", "NC"))+ # alters label names
+      theme(legend.title = element_text(colour="black", size=12, face="bold"), # legend titel
       legend.text = element_text(colour="black", size = 12, face = "bold"), # legend text
       legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"), # background of plot, default without
       legend.position="bottom" # position of legend, "top", "bottom", "rigth", "left"
