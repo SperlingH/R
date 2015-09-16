@@ -12,7 +12,7 @@
 #   scatter plot
 
 ## ggplot2
-## scatterplot  of CO2 data
+## scatterplot  of CO2 data, Type and Condition
 	
 
 library(ggplot2)
