@@ -15,7 +15,7 @@
   ## Create facet_grid with individual geom_hline
   # use dataset "CO2"
   # plotting conc against uptake
-  # differntiate between Type (column) and Treatment (row)
+  # differentiate between Type (column) and Treatment (row)
   
   library(ggplot2)
   
@@ -30,11 +30,13 @@
   # Titel 
   ggtitle(expression(atop("Carbon Dioxide Uptake in Grass Plants", atop(italic("cold tolerance in Echinochloa spec."), ""))))+
     theme(plot.title = element_text(size=30, vjust=-1, family="Arial"))+
+  
   # Axes
     labs(x="CO2 concentration (mL/ L)", y = "µmol/ m² sec") +# axis labels
   #  scale_y_continuous(expand = c(0,0))+ # removes distance between bottom of plot and x-axis
   #  coord_cartesian(xlim=c(0,20))+ # scaling of the x-axis  
   #  coord_cartesian(ylim=c(1,5.5)) # scaling of the y-axis 
+  
   # Legend
   #  theme(legend.position="none")#removes legend
   #  theme(legend.title=element_blank()) # removes title of legend
