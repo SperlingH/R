@@ -48,3 +48,7 @@
       legend.background = element_rect(fill="gray90", size=.5, linetype="dotted"), # background of plot, default without
       legend.position="bottom" # position of legend, "top", "bottom", "rigth", "left"
       )
+
+# smaller example:  
+#  mtcars$gear <- as.factor(mtcars$gear)
+#  qplot(mpg, disp, data - mtcars, facets = cyl ~ gear)
