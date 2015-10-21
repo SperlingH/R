@@ -10,11 +10,11 @@
 #   library(devtools) # needed for https source from github
 #   source_url('https://raw.githubusercontent.com/SperlingH/R/master/theme_plain1.R')
 #
-#   +theme_plain1() # within a ggplot evocation
+#   + theme_plain1() # within a ggplot evocation
 # Input:
 #   FIXME - variables to be changed within the function
 # Output:
-#   theme() for ggplot2
+#   modified theme() for ggplot2
 
 require(grid)
 
