@@ -1,10 +1,16 @@
 # Creation date: 2015-09-28
-# Created by: HS
-# Objective: Function for Bonferroni, Holm, and Holm-Sidak corrections if you have a data.frame with given t.value and DF (degree of freedom)
-# Usage: Pairwise.t.test.corrections(input.data.frame)
-# Input: Data.frame with t.value and DF
-# Output: Data.frame with corrected p.values and boolean indicator wether conditions are met
-# Misc: Needs further testing with different input data.frames
+# Created by: 
+#    HS
+# Objective: 
+#    Function for Bonferroni, Holm, and Holm-Sidak corrections if you have a data.frame with given t.value and DF (degree of freedom)
+# Usage: 
+#    Pairwise.t.test.corrections(input.data.frame)
+# Input: 
+#    Data.frame with t.value and DF
+# Output: 
+#   Data.frame with corrected p.values and boolean indicator wether conditions are met
+# Misc: 
+#    Needs further testing with different input data.frames
 
 
 pairwise.t.test.corrections <- (results) {
