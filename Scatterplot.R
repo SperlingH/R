@@ -3,11 +3,11 @@
 # Created by:
 #   HS
 # Objective:
-#   create scatter plot
+#   create a scatter plot with trend and 2*2 conditions
 # Usage:
 #
 # Input:
-#   
+#   -None- 
 # Output:
 #   scatter plot
 
@@ -17,14 +17,11 @@
 
 library(ggplot2)
 ggplot(CO2, aes(conc, uptake, color = Treatment, shape = Type)) + 
-  geom_point() + 
+  geom_point() + #   geom_point(size = 10) +
   scale_shape_manual(values=c(1,2)) +  # Use a hollow circle and triangle
   stat_smooth(method="loess" , level=0)+ # method = lm, glm, gam, loess, rlm
+#   geom_text(data = CO2,aes(x = conc, y = uptake, label = Plant), size = 3, col = "black") + # use text instead of points
 
-#   geom_point(size = 10) +
-#   geom_text(data = CO2,aes(x = conc, y = uptake, label = Plant), size = 3, col = "black") +
-#   geom_rect(data = CO2, aes(xmin = conc -.4, xmax = conc + .4, ymin = uptake - .4, ymax = uptake + .4),  alpha=0.1) + 
-  
 # Titel 
 ggtitle(expression(atop("Carbon Dioxide Uptake in Grass Plants", atop(italic("cold tolerance in Echinochloa spec."), ""))))+
 theme(plot.title = element_text(size=30, vjust=-1, family="Arial"))+
