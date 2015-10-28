@@ -3,13 +3,13 @@
 # Created by:
 #   HS
 # Objective:
-#   Get a plain theme() for ggplot2
+#   Get histogram with the discrete datapoints shown
 # Usage:
 #
 # Input:
-#   FIXME - variables to be changed within the function
+#   
 # Output:
-#   theme() for ggplot2
+#   
 
 
 ## Plot descreet values
