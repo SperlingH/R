@@ -13,17 +13,16 @@
 
 library(ggplot2)
 
-# Barplots with errorbars
-## getting mean and sd over subsets of data
+# get example data
+# getting mean and sd over subsets of data
 library(plyr)
 new.df <- ddply(CO2,c("Type", "Treatment", "conc"), summarise, mean.uptake = mean(uptake), sd.uptake = sd(uptake))
-
 #reorder factors of CO2$Type 
 new.df$Type <- factor(new.df$Type, levels = c("Mississippi","Quebec")) #redefine levels
-
 # subsetting data
 new.df.2 <- subset(new.df, conc == 1000)
 
+# Barplot with errorbars
 ggplot(new.df.2, aes(Type , mean.uptake, fill = Treatment))+
 	geom_bar(stat="identity", position=position_dodge())+ # grouping by Type
 # Errorbar
