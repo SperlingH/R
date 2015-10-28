@@ -5,7 +5,7 @@
 # Objective:
 #   create example data
 # Usage:
-#
+#   adjust variables to get defined plot
 # Input:
 #   FIXME 
 # Output:
