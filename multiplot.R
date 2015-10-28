@@ -3,11 +3,15 @@
   # Created by:
   #   HS
   # Objective:
-  #   create grid of plot with individual graphical features
+  #   create grid of plot with different factors
   # Usage:
-  #   FIXME - None so far
-  # Input:
-  #   FIXME - None so far
+  #   FIXME - create a function for easier use
+  # Input: 
+  #   data.frame with 
+  #     x = conc
+  #     y = uptake
+  #     vertical condition = Treatment; different colours
+  #     horizontal condition = Type
   # Output:
   #   plot; x vs. y of N * M categories
   
@@ -51,4 +55,4 @@
 
 # smaller example:  
 #  mtcars$gear <- as.factor(mtcars$gear)
-#  qplot(mpg, disp, data - mtcars, facets = cyl ~ gear)
+#  qplot(mpg, disp, data = mtcars, facets = cyl ~ gear)
