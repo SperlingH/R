@@ -1,11 +1,12 @@
 # Creation date: 2015-09-30
 # Created by: HS
-# Objective: Get relative risc and odds ratio from a 2*2 matrix
+# Objective: Get relative risc and odds ratio from a 2x2 matrix; various functions that can be used in a 2x2 matrix
 # Usage: 
-# Input: 2x2 Matrix
+# Input: 2x2 matrix
 # Output: values of relative risc, odds ratio etc.
 # Misc: should work fine
 
+# example 2x2 matrix
 # a = matrix(c(1012,2051,
 #              8621,17520),
 #            ncol = 2,
@@ -32,7 +33,7 @@ odds.ratio <- function(a){
 }
 # odds.ratio(a)
 
-#Chi square test with test wether there are at least n=5 expected frequency per cell 
+#Chi square test with test whether there are at least n=5 expected frequency per cell 
 Xsq <- function(a){
   xsq <- chisq.test(a)
   print(paste("Xsq:", round(xsq$statistic, digits = 4)))
