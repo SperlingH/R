@@ -16,7 +16,7 @@
 #   plot of network interactions
 
 
-plot.network.from.df <- function (df.1, titel, v.interactive = F){
+plot.network.from.df <- function (df.1, titel, nodeinfo, v.interactive = F){
   require(network)
 df.netw.2 <- network(df.1, 
                      directed=F,
@@ -40,4 +40,4 @@ df.1 <- data.frame(V1 = c("A","A","A","A","B","B","C","D"),
 nodeinfo <- data.frame(Node = c("A","B","C","D","E"),
                        Class = c("1","2","1","2","3"))
 titel = "Network analysis titel"
-plot.network.from.df(df.1, titel)
+plot.network.from.df(df.1, titel, nodeinfo)
