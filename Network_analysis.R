@@ -10,7 +10,8 @@
 #     titel: titel of plot
 #     v.interactive = set plot to interactive (T) to move nodes, default is (F)
 # Input: 
-#   plot.network.from.df(df.1, titel)
+#   plot.network.from.df(df.1, titel, v.interactive)
+#   nodeinfo
 # Output:
 #   plot of network interactions
 
@@ -23,22 +24,20 @@ df.netw.2 <- network(df.1,
                      multiple = T,
                      bipartite = F)
 plot(df.netw.2,
-     #vertex.col=nodeinfo$Class,
-     #vertex.sides=nodeinfo$Class,
      main=titel,
-     #mode = "circle",
+     vertex.col=nodeinfo$Class,
      interactive = v.interactive,
      jitter = TRUE,
      usearrows = FALSE,
      displaylabels = TRUE,
-     #boxed.labels = T,
      label.cex = .7
      )
 }
 
-# #example data
-# df.1 <- data.frame(V1 = c("A","A","A","A","B","B","C","D"), 
-#                    V2 = c("B","C","D","E","A","C","D","A"))
-# titel = "Network analysis titel"
-# 
-# plot.network.from.df(df.1, titel)
+#example data
+df.1 <- data.frame(V1 = c("A","A","A","A","B","B","C","D"), 
+                   V2 = c("B","C","D","E","A","C","D","E"))
+nodeinfo <- data.frame(Node = c("A","B","C","D","E"),
+                       Class = c("1","2","1","2","3"))
+titel = "Network analysis titel"
+plot.network.from.df(df.1, titel)
