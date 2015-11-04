@@ -6,12 +6,11 @@
 #   function for network analysis
 # Usage: 
 #   plot.network.from.df(df.1, titel, v.interactive = F)
-#     df.1: data.frame of interaction pairs
-#     titel: titel of plot
-#     v.interactive = set plot to interactive (T) to move nodes, default is (F)
 # Input: 
-#   plot.network.from.df(df.1, titel, v.interactive)
-#   nodeinfo
+#     df.1: data.frame of interaction pairs
+#     nodeinfo: data.frame with "Node" and "Class" of Nodes
+#     titel: titel of plot
+#     v.interactive: set plot to interactive (T) to move nodes, default is (F)
 # Output:
 #   plot of network interactions
 
