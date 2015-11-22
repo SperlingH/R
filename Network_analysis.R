@@ -18,7 +18,7 @@
 plot.network.from.df <- function (df.1, titel, nodeinfo, v.interactive = F){
   require(network)
 df.netw.2 <- network(df.1, 
-                     directed=F,
+                     directed=T, # direction of interaction
                      loops = F,
                      multiple = T,
                      bipartite = F)
@@ -27,7 +27,7 @@ plot(df.netw.2,
      vertex.col=nodeinfo$Class,
      interactive = v.interactive,
      jitter = TRUE,
-     usearrows = FALSE,
+     usearrows = T, # show arrowheads for direction of interaction
      displaylabels = TRUE,
      label.cex = .7
      )

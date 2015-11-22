@@ -19,7 +19,9 @@ library(ggplot2)
 ggplot(CO2, aes(conc, uptake, color = Treatment, shape = Type)) + 
   geom_point() + #   geom_point(size = 10) +
   scale_shape_manual(values=c(1,2)) +  # Use a hollow circle and triangle
-  stat_smooth(method="loess" , level=0)+ # method = lm, glm, gam, loess, rlm
+  stat_smooth(method = "glm",
+              family = gaussian(link="log"))+
+  #stat_smooth(method="loess" , level=0)+ # method = lm, glm, gam, loess, rlm
 #   geom_text(data = CO2,aes(x = conc, y = uptake, label = Plant), size = 3, col = "black") + # use text instead of points
 
 # Titel 
