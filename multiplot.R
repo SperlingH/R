@@ -27,7 +27,7 @@
   
   ggplot(CO2, aes(x = conc, y = uptake, colour=factor(Treatment))) + 
   	geom_point() + 
-  	facet_grid(Treatment~Type) +
+  	facet_grid(Treatment~Type) + # (vertical ~ horizontal) e.g. only Treatment vertical: facet_grid(Treatment ~ .)
   	stat_smooth(method="loess") + 
   	geom_hline(data = h.line, aes(yintercept = Y.intercept))+ # plots horizontal line in the plot
   
